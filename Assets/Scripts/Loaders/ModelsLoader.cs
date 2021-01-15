@@ -6,8 +6,6 @@ public class ModelsLoader : MonoBehaviour
 {
     private ModelsList _list;
 
-    //public List<PlacebleItem> GameObjects { get { return _gameObjects; } }
-
     void Start()
     {
         _list = Resources.Load<ModelsList>("ScriptableObjects/Lists/Models");

@@ -39,7 +39,6 @@ public class PlaceController : MonoBehaviour
         _controllableObject = gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_moving) {

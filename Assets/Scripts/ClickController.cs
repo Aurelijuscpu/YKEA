@@ -49,6 +49,7 @@ public class ClickController : MonoBehaviour
             Click();
     }
 
+    //Check if click was on a placed object
     private void Click()
     {
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())

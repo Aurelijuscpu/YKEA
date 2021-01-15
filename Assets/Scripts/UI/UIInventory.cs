@@ -48,7 +48,7 @@ public class UIInventory : MonoBehaviour
                 slots[i].AddItem(inventory.Items[i]);
             } else
             {
-                //Clear slot if dynamic inventory
+                //Clear slot method, if dynamic inventory
             }
         }
     }

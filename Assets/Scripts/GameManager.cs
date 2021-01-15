@@ -24,12 +24,17 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    private void Start()
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    void SaveData()
     {
 
     }
 
-    private void Update()
+    void LoadData()
     {
 
     }

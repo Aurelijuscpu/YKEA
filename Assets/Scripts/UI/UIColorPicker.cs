@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorPicker : MonoBehaviour
+public class UIColorPicker : MonoBehaviour
 {
     private MeshRenderer _gameObject;
 
     private Color _newColor;
     private Color _oldColor;
 
-    private void Start()
+    private void Update()
     {
-        HideColorPicker();
+        FaceCamera();
     }
 
     public void ShowColorPicker(MeshRenderer mesh)
@@ -28,7 +28,7 @@ public class ColorPicker : MonoBehaviour
 
     public void HideColorPicker()
     {
-        transform.gameObject.SetActive(false);
+        Destroy(transform.gameObject);
     }
 
     private void SetSlidersStartingValues()
@@ -74,5 +74,10 @@ public class ColorPicker : MonoBehaviour
     public void RevertToPrevious()
     {
         _gameObject.material.color = _oldColor;
+    }
+
+    private void FaceCamera()
+    {
+        transform.forward = Camera.main.transform.forward;
     }
 }

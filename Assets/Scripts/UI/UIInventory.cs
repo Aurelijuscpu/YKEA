@@ -11,12 +11,10 @@ public class UIInventory : MonoBehaviour
     private InventorySlot[] slots;
     ModelsList modelsLoader;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        inventory = Inventory.Instance;
-        inventory.OnItemChangedCallback += UpdateUI;
-
         modelsLoader = Resources.Load<ModelsList>("ScriptableObjects/Lists/Models");
         if(modelsLoader == null)
         {
@@ -25,6 +23,9 @@ public class UIInventory : MonoBehaviour
 
         GenerateSlots();
         slots = transform.GetComponentsInChildren<InventorySlot>();
+
+        inventory = Inventory.Instance;
+        inventory.OnItemChangedCallback += UpdateUI;
     }
 
     void GenerateSlots()

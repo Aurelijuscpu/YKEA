@@ -79,59 +79,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Green
---- !u!1 &7380430404465365962
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7380430404465366005}
-  - component: {fileID: 7380430404465366004}
-  m_Layer: 5
-  m_Name: ColorPallete
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7380430404465366005
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7380430404465365962}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64849997, y: 0.64849997, z: 0.64849997}
-  m_Children:
-  - {fileID: 7380430406294862514}
-  - {fileID: 7380430405848906586}
-  - {fileID: 7380430404900298719}
-  - {fileID: 7380430406051339638}
-  - {fileID: 7380430405581739997}
-  m_Father: {fileID: 7380430404494439211}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7380430404465366004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7380430404465365962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463cf4b2009ce9648b61d263f3c309e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7380430404494439215
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,10 +91,10 @@ GameObject:
   - component: {fileID: 7380430404494439208}
   - component: {fileID: 7380430404494439209}
   - component: {fileID: 7380430404494439214}
-  - component: {fileID: 1660837951}
+  - component: {fileID: 810983772}
   m_Layer: 5
   m_Name: UI_ColorPalleteCanvas
-  m_TagString: Untagged
+  m_TagString: ColorPicker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +110,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.02, y: 0.02, z: 1}
   m_Children:
-  - {fileID: 7380430404465366005}
+  - {fileID: 7380430406294862514}
+  - {fileID: 7380430405848906586}
+  - {fileID: 7380430404900298719}
+  - {fileID: 7380430406051339638}
+  - {fileID: 7380430405581739997}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -232,7 +183,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1660837951
+--- !u!114 &810983772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +192,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7380430404494439215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ff7d5ccd561634497cb8a0b3c0cbe1, type: 3}
+  m_Script: {fileID: 11500000, guid: 463cf4b2009ce9648b61d263f3c309e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7380430404578861825
@@ -451,20 +402,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380430404900298716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6484999, y: 0.6484999, z: 0.64849997}
   m_Children:
   - {fileID: 7380430405592717293}
   - {fileID: 7380430405525093951}
   - {fileID: 7380430404630011961}
   - {fileID: 8954133829414656636}
-  m_Father: {fileID: 7380430404465366005}
+  m_Father: {fileID: 7380430404494439211}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -12.97}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7380430404900298718
@@ -517,10 +468,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: ApplyColor
-        m_Mode: 1
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: GChannel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -529,10 +480,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: GChannel
-        m_Mode: 0
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: ApplyColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -828,16 +779,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380430405581739986}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6484999, y: 0.6484999, z: 0.64849997}
   m_Children: []
-  m_Father: {fileID: 7380430404465366005}
+  m_Father: {fileID: 7380430404494439211}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -64}
+  m_AnchoredPosition: {x: 19.455, y: -41.503998}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7380430405581739998
@@ -921,8 +872,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
         m_MethodName: RevertToPrevious
         m_Mode: 1
         m_Arguments:
@@ -933,8 +884,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
         m_MethodName: HideColorPicker
         m_Mode: 1
         m_Arguments:
@@ -1044,15 +995,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380430405848906587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6484999, y: 0.6484999, z: 0.64849997}
   m_Children:
   - {fileID: 7380430406140369106}
   - {fileID: 7380430406524620841}
   - {fileID: 7380430404713338047}
   - {fileID: 2576330273106910125}
-  m_Father: {fileID: 7380430404465366005}
+  m_Father: {fileID: 7380430404494439211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1110,10 +1061,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: ApplyColor
-        m_Mode: 1
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: BChannel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1122,10 +1073,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: BChannel
-        m_Mode: 0
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: ApplyColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1160,16 +1111,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380430406051339639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6484999, y: 0.6484999, z: 0.64849997}
   m_Children: []
-  m_Father: {fileID: 7380430404465366005}
+  m_Father: {fileID: 7380430404494439211}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -64}
+  m_AnchoredPosition: {x: -17.509499, y: -41.503998}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7380430406051339635
@@ -1253,8 +1204,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
         m_MethodName: ApplyColor
         m_Mode: 1
         m_Arguments:
@@ -1265,8 +1216,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
         m_MethodName: HideColorPicker
         m_Mode: 1
         m_Arguments:
@@ -1637,20 +1588,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380430406294862515}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6484999, y: 0.6484999, z: 0.64849997}
   m_Children:
   - {fileID: 7380430406165869912}
   - {fileID: 7380430406058402011}
   - {fileID: 7380430404722196260}
   - {fileID: 789271326512677898}
-  m_Father: {fileID: 7380430404465366005}
+  m_Father: {fileID: 7380430404494439211}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 12.97}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7380430406294862525
@@ -1703,10 +1654,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: ApplyColor
-        m_Mode: 1
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: RChannel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1715,10 +1666,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7380430404465366004}
-        m_TargetAssemblyTypeName: ColorPicker, Assembly-CSharp
-        m_MethodName: RChannel
-        m_Mode: 0
+      - m_Target: {fileID: 810983772}
+        m_TargetAssemblyTypeName: UIColorPicker, Assembly-CSharp
+        m_MethodName: ApplyColor
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

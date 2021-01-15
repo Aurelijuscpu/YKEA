@@ -5,13 +5,29 @@ using UnityEngine;
 public class UIPopup : MonoBehaviour
 {
     private GameObject _gameObject;
-    ColorPicker colorPalleteUI;
+
+    UIColorPicker colorPicker;
+
+    private CanvasList _canvasList;
 
     private void Start()
     {
-        colorPalleteUI = FindObjectOfType<ColorPicker>();
+        _canvasList = Resources.Load<CanvasList>("ScriptableObjects/Lists/Canvas");
+        GetUIItem();
+
         ClickController.Instance.OnPlacableClickCallback += ShowPopup;
         HidePopup();
+    }
+
+    private void GetUIItem()
+    {
+        for (int i = 0; i < _canvasList.canvas.Count; i++)
+        {
+            if (_canvasList.canvas[i].gameObject.CompareTag("ColorPicker"))
+            {
+                colorPicker = _canvasList.canvas[i].GetComponent<UIColorPicker>();
+            }
+        }
     }
 
     void Update()
@@ -47,7 +63,9 @@ public class UIPopup : MonoBehaviour
 
     public void ChangeColor()
     {
-        colorPalleteUI.ShowColorPicker(_gameObject.GetComponent<MeshRenderer>());
+        var temp = Instantiate(colorPicker.gameObject);
+        Debug.Log(temp);
+        temp.GetComponent<UIColorPicker>().ShowColorPicker(_gameObject.GetComponent<MeshRenderer>());
     }
 
     private void FaceCamera()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PositionChanger : MonoBehaviour
 {
+    private float rotationSpeed = 1;
+
     public void MoveToPosition(Vector3 targetPosition)
     {
         float halfHeight = transform.GetComponent<MeshFilter>().mesh.bounds.extents.y;
@@ -14,11 +16,11 @@ public class PositionChanger : MonoBehaviour
 
     public void RotateAroundYRight()
     {
-        transform.Rotate(new Vector3(0, 1, 0));
+        transform.Rotate(new Vector3(0, rotationSpeed, 0));
     }
 
     public void RotateAroundYLeft()
     {
-        transform.Rotate(new Vector3(0, -1, 0));
+        transform.Rotate(new Vector3(0, -rotationSpeed, 0));
     }
 }

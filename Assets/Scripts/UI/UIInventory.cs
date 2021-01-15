@@ -9,7 +9,7 @@ public class UIInventory : MonoBehaviour
 
     private Inventory inventory;
     private InventorySlot[] slots;
-    ModelsLoader modelsLoader;
+    ModelsList modelsLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,11 @@ public class UIInventory : MonoBehaviour
         inventory = Inventory.Instance;
         inventory.OnItemChangedCallback += UpdateUI;
 
-        modelsLoader = FindObjectOfType<ModelsLoader>();
+        modelsLoader = Resources.Load<ModelsList>("ScriptableObjects/Lists/Models");
+        if(modelsLoader == null)
+        {
+            Debug.LogError("ScriptableObjects/Lists/Models File not found");
+        }
 
         GenerateSlots();
         slots = transform.GetComponentsInChildren<InventorySlot>();
@@ -27,7 +31,7 @@ public class UIInventory : MonoBehaviour
     {
         if(modelsLoader != null)
         {
-            for (int i = 0; i < modelsLoader.GameObjects.Count; i++)
+            for (int i = 0; i < modelsLoader.models.Count; i++)
             {
                 Instantiate(slot.gameObject, transform);
             }

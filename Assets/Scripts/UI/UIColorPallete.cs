@@ -16,10 +16,6 @@ public class UIColorPallete : MonoBehaviour
     void Update()
     {
         FaceCamera();
-        if (Input.GetMouseButtonDown(1))
-        {
-            HideColorPicker();
-        }
     }
 
     void HideColorPicker()

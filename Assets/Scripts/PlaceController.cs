@@ -27,7 +27,8 @@ public class PlaceController : MonoBehaviour
 
     private PositionChanger _controllableObject;
 
-    private bool _moving;
+    //Allow manipulations with _controllableObject
+    private bool _moving;    
 
     public void SetControllableObject(PositionChanger gameObject)
     {
@@ -41,10 +42,17 @@ public class PlaceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotateObject();
-        MoveObject();
-        StopMoving();
-        Cancel();
+        if (_moving) {
+            RotateObject();
+            MoveObject();
+            Cancel();
+            StopMoving();
+        }
+    }
+
+    public bool IsMoving()
+    {
+        return _moving;
     }
 
     void StopMoving()
@@ -59,23 +67,21 @@ public class PlaceController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            _moving = false;
             Destroy(_controllableObject.gameObject);
         }
     }
 
     void MoveObject()
     {
-        if (_moving)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] hits = Physics.RaycastAll(ray);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit[] hits = Physics.RaycastAll(ray);
 
-            for (int i = 0; i < hits.Length; i++)
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.name == "Ground")
             {
-                if (hits[i].transform.name == "Ground")
-                {
-                    _controllableObject.MoveToPosition(hits[i].point);
-                }
+                _controllableObject.MoveToPosition(hits[i].point);
             }
         }
     }

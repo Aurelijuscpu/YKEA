@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ModelsLoader : MonoBehaviour
+{
+    private ModelsList _list;
+
+    //public List<PlacebleItem> GameObjects { get { return _gameObjects; } }
+
+    void Start()
+    {
+        _list = Resources.Load<ModelsList>("ScriptableObjects/Lists/Models");
+        if (_list == null)
+        {
+            Debug.LogError("ScriptableObjects/Lists/Models File not found");
+            return;
+        }
+
+        for (int i = 0; i < _list.models.Count; i++)
+        {
+            Inventory.Instance.Add(_list.models[i]);
+        }
+    }
+}

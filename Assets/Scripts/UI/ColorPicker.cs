@@ -17,6 +17,7 @@ public class ColorPicker : MonoBehaviour
 
     public void ShowColorPicker(MeshRenderer mesh)
     {
+        transform.position = mesh.transform.position;
         transform.gameObject.SetActive(true);
         _gameObject = mesh;
         _oldColor = _gameObject.material.color;

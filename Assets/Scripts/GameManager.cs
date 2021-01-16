@@ -24,6 +24,13 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public int targetFPS = 60;
+
+    private void Start()
+    {
+        Application.targetFrameRate = targetFPS;   //Limit fps
+    }
+
     public void ExitGame()
     {
         Application.Quit();

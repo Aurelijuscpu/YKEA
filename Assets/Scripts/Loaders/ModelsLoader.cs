@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ModelsLoader : MonoBehaviour
 {
+    public static string PLACEDTAG = "PlacedObject"; 
+
     private ModelsList _list;
 
     void Start()
@@ -22,7 +24,18 @@ public class ModelsLoader : MonoBehaviour
 
         for (int i = 0; i < _list.models.Count; i++)
         {
+            AdaptModel(_list.models[i].furniture);
             Inventory.Instance.Add(_list.models[i]);
         }
+    }
+
+    void AdaptModel(GameObject temp)
+    {
+        if (temp.GetComponent<Collider>() == null)
+            temp.AddComponent<MeshCollider>();
+        if (!temp.CompareTag(PLACEDTAG))
+            temp.tag = PLACEDTAG;
+        if (temp.GetComponent<PositionChanger>() == null)
+            temp.AddComponent<PositionChanger>();
     }
 }

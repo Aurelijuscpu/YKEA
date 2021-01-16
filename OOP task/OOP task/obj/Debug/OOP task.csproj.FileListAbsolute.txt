@@ -1,7 +1,0 @@
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\bin\Debug\OOP task.exe.config
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\bin\Debug\OOP task.exe
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\bin\Debug\OOP task.pdb
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\obj\Debug\OOP task.csprojAssemblyReference.cache
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\obj\Debug\OOP task.csproj.CoreCompileInputs.cache
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\obj\Debug\OOP task.exe
-C:\Users\Ax\Desktop\KTU reikalai\Praktika\SneakyBox\OOP task\OOP task\obj\Debug\OOP task.pdb

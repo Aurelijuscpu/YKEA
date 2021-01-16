@@ -24,33 +24,93 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
-    public GameObject introduction;
-    public GameObject movingTutorial;
+    private MainCanvas _mainCanvasLink;
+    private CanvasList _canvasList;
+
+    private GameObject _mainCanvas;
+    private GameObject _colorPickerUI;
+    private GameObject _toolsUI;
+    private GameObject _introductionUI;
+    private GameObject _movingTutorialUI;
+
+    private void Start()
+    {
+        GetUIPrefabs();
+        GetUIItem();
+        InstantiateUI();
+
+        ClickController.Instance.OnPlacableClickCallback += ShowTools;
+    }
 
     private void Update()
     {
-        if (introduction.activeSelf && Input.anyKeyDown)
-        {
-            HidePopup(introduction);
-        }
+        if (_introductionUI.activeSelf && Input.anyKeyDown)
+            _introductionUI.SetActive(false);
 
         if (PlaceController.Instance.IsMoving())
-        {
-            ShowPopup(movingTutorial);
-        }
+            _movingTutorialUI.SetActive(true);
         else
+            _movingTutorialUI.SetActive(false);
+    }
+
+    private void InstantiateUI()
+    {
+        _mainCanvas = Instantiate(_mainCanvasLink.canvas.gameObject);
+        _toolsUI = Instantiate(_toolsUI.gameObject);
+        _colorPickerUI = Instantiate(_colorPickerUI.gameObject);
+        _introductionUI = Instantiate(_introductionUI, _mainCanvas.transform);
+        _movingTutorialUI = Instantiate(_movingTutorialUI, _mainCanvas.transform);
+    }
+
+    private void GetUIPrefabs()
+    {
+        _canvasList = Resources.Load<CanvasList>("ScriptableObjects/Lists/Canvas");
+        if (_canvasList == null)
         {
-            HidePopup(movingTutorial);
+            Debug.LogError("ScriptableObjects/Lists/Canvas file not found");
+            return;
+        }
+
+        _mainCanvasLink = Resources.Load<MainCanvas>("ScriptableObjects/MainCanvas");
+        if (_mainCanvasLink == null)
+        {
+            Debug.LogError("ScriptableObjects/MainCanvas file not found");
+            return;
         }
     }
 
-    void HidePopup(GameObject gm)
+    private void GetUIItem()
     {
-        gm.SetActive(false);
+        for (int i = 0; i < _canvasList.canvas.Count; i++)
+        {
+            if (_canvasList.canvas[i].gameObject.CompareTag("ColorPicker"))
+                _colorPickerUI = _canvasList.canvas[i];
+            if (_canvasList.canvas[i].gameObject.CompareTag("Tools"))
+                _toolsUI = _canvasList.canvas[i];
+            if (_canvasList.canvas[i].gameObject.CompareTag("Introduction"))
+                _introductionUI = _canvasList.canvas[i];
+            if (_canvasList.canvas[i].gameObject.CompareTag("MovingTutorial"))
+                _movingTutorialUI = _canvasList.canvas[i];
+        }
     }
 
-    void ShowPopup(GameObject gm)
+    public void HideTools()
     {
-        gm.SetActive(true);
+        _toolsUI.GetComponent<IPopup>().Hide();
+    }
+
+    public void ShowTools(GameObject clickedObject)
+    {
+        _toolsUI.GetComponent<IPopup>().Show(clickedObject);
+    }
+
+    public void ShowColorPicker(GameObject clickedObject)
+    {
+        _colorPickerUI.GetComponent<IPopup>().Show(clickedObject);
+    }
+
+    public void HideColorPicker()
+    {
+        _colorPickerUI.GetComponent<IPopup>().Hide();
     }
 }

@@ -35,6 +35,7 @@ public class ClickController : MonoBehaviour
 
     public int targetFPS = 60;
 
+    //Subscribe objects to act on placed object click
     public delegate void OnPlacableClick(GameObject clicked);
     public event OnPlacableClick OnPlacableClickCallback;
 
@@ -63,6 +64,10 @@ public class ClickController : MonoBehaviour
                 {
                     if (OnPlacableClickCallback != null)
                         OnPlacableClickCallback.Invoke(hit.transform.gameObject);
+                }
+                else
+                {//Or create new Event if more objects must act OnPlacableClickCallback
+                    UIManager.Instance.HideTools();
                 }
             }
         }

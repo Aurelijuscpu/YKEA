@@ -99,11 +99,11 @@ GameObject:
   - component: {fileID: 6522213235259301447}
   m_Layer: 5
   m_Name: Introduction
-  m_TagString: Untagged
+  m_TagString: Introduction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6522213235259301440
 RectTransform:
   m_ObjectHideFlags: 0

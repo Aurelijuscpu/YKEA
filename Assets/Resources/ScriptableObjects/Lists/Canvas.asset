@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas:
   - {fileID: 7380430404494439215, guid: aeb5876e0d0723f429aba604745efa94, type: 3}
+  - {fileID: 7549681660638331176, guid: 663fe27b12515404cb9631fe061e9d4b, type: 3}
+  - {fileID: 6522213235259301441, guid: 7ea30d936e682d046a146c9777c5cb0f, type: 3}
+  - {fileID: 7748416305677483313, guid: 698c9a239f935434fa7291bd4e398418, type: 3}

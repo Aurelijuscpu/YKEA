@@ -8,6 +8,11 @@ public class ModelsLoader : MonoBehaviour
 
     void Start()
     {
+        Invoke("Delay", 0); //Bug of inventory fix
+    }
+
+    void Delay()
+    {
         _list = Resources.Load<ModelsList>("ScriptableObjects/Lists/Models");
         if (_list == null)
         {

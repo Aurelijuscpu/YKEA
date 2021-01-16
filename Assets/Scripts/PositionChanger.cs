@@ -8,19 +8,31 @@ public class PositionChanger : MonoBehaviour
 
     public void MoveToPosition(Vector3 targetPosition)
     {
-        float halfHeight = transform.GetComponent<MeshFilter>().mesh.bounds.extents.y;
-        Vector3 aboveGround = targetPosition;
-        aboveGround = new Vector3(aboveGround.x, aboveGround.y + halfHeight, aboveGround.z);
-        transform.position = aboveGround;
+        if (transform != null)
+        {
+            float halfHeight = transform.GetComponent<MeshFilter>().mesh.bounds.extents.y;
+            Vector3 aboveGround = targetPosition;
+            aboveGround = new Vector3(aboveGround.x, aboveGround.y + halfHeight, aboveGround.z);
+            transform.position = aboveGround;
+        } else
+        {
+            Debug.LogError("No attached transform");
+        }
     }
 
     public void RotateAroundYRight()
     {
-        transform.Rotate(new Vector3(0, rotationSpeed, 0));
+        if(transform != null)
+            transform.Rotate(new Vector3(0, rotationSpeed, 0));
+        else
+            Debug.LogError("No attached transform");
     }
 
     public void RotateAroundYLeft()
     {
-        transform.Rotate(new Vector3(0, -rotationSpeed, 0));
+        if (transform != null)
+            transform.Rotate(new Vector3(0, -rotationSpeed, 0));
+        else
+            Debug.LogError("No attached transform");
     }
 }
